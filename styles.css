@@ -50,6 +50,40 @@ input[type="text"]:focus, select:focus {
     outline: none;
 }
 
+/* Estilização do booleano */
+.frete-type {
+    margin-bottom: 20px;
+}
+
+.frete-type label {
+    font-size: 18px; /* Aumentado */
+    color: #2c3e50;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px; /* Espaçamento entre opções */
+    margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+    display: none; /* Esconde o radio button padrão */
+}
+
+.radio-group label {
+    font-size: 16px;
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background: #3498db;
+    color: #fff;
+}
+
 button {
     padding: 10px 25px;
     background: linear-gradient(90deg, #3498db, #2980b9);
@@ -70,25 +104,25 @@ button:hover {
 }
 
 #result {
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 25px;
+    padding: 25px;
     background: linear-gradient(135deg, #e0eafc, #a3bffa);
     border-radius: 15px;
     border: 3px solid #2980b9;
     color: #2c3e50;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 2;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     animation: popIn 0.6s ease-out;
 }
 
 #result strong {
     color: #3498db;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
@@ -105,7 +139,10 @@ button:hover {
     .form-group { margin-bottom: 10px; }
     label { font-size: 12px; }
     input[type="text"], select { padding: 8px; font-size: 12px; }
+    .frete-type label { font-size: 16px; }
+    .radio-group { gap: 15px; }
+    .radio-group label { font-size: 14px; padding: 6px 12px; }
     button { padding: 8px 20px; font-size: 12px; }
-    #result { font-size: 14px; padding: 15px; }
-    #result strong { font-size: 18px; }
+    #result { font-size: 16px; padding: 20px; }
+    #result strong { font-size: 20px; }
 }
