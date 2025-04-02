@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 14px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin: 20px auto;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2980b9, #1f6391);
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0eafc, #a3bffa);
+    border-radius: 15px;
+    border: 3px solid #2980b9;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.6s ease-out;
+}
+
+#result strong {
+    color: #3498db;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    70% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    .container { padding: 15px; max-width: 100%; }
+    h2 { font-size: 20px; }
+    .form-group { margin-bottom: 10px; }
+    label { font-size: 12px; }
+    input[type="text"], select { padding: 8px; font-size: 12px; }
+    button { padding: 8px 20px; font-size: 12px; }
+    #result { font-size: 14px; padding: 15px; }
+    #result strong { font-size: 18px; }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Frete</h2>
+        <div class="form-group">
+            <label>Peso Inicial (kg):</label>
+            <input type="text" id="initialWeight" placeholder="Ex: 10.000,00">
+        </div>
+        <div class="form-group">
+            <label>Peso Final (kg):</label>
+            <input type="text" id="finalWeight" placeholder="Ex: 9.900,00">
+        </div>
+        <div class="form-group">
+            <label>Tolerância:</label>
+            <select id="toleranceType">
+                <option value="percent">Em %</option>
+                <option value="kg">Em kg</option>
+            </select>
+            <input type="text" id="tolerance" placeholder="Ex: 0,50 ou 50,00">
+        </div>
+        <div class="form-group">
+            <label>Valor da Mercadoria (R$):</label>
+            <input type="text" id="totalValue" placeholder="Ex: 50.000,00">
+        </div>
+        <div class="form-group">
+            <label>Tarifa do Motorista (R$/kg):</label>
+            <input type="text" id="driverRate" placeholder="Ex: 10,00">
+        </div>
+        <button onclick="calculateDifference()">Calcular</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
